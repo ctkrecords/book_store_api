@@ -9,7 +9,7 @@ module BookStore
                 desc 'Return list of books'
                 get do
                     books = Book.all
-                    present books, with: BookStore::Entities::Book
+                    present books, with: BookStore::Entities::Index
                 end
 
                 desc 'Return a specific book'
@@ -35,7 +35,7 @@ module BookStore
                         end
                     end
                 end
-                
+
             end
         end
     end
