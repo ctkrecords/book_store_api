@@ -12,6 +12,15 @@ module BookStore
                     present books, with: BookStore::Entities::Index
                 end
 
+                desc 'Return the name of the book'
+                route_param :name do
+                  get do
+                    nom = params[:name]
+                    #puts nom lo guarda sin las comillas dobles 
+                    present nom
+                  end
+                end
+
                 desc 'Return a specific book'
                 route_param :id do
                     get do
